@@ -41,41 +41,41 @@ int dni_t::get_contador(void){
 bool dni_t::operator==(dni_t& dni){
     
     contador_++;
-    return (numero_dni_ == dni.get_dni());
+    return (numero_dni_ + letra_dni_== dni.get_dni() + dni.get_letra());
 }
 
 bool dni_t::operator!=(dni_t& dni){
     
     contador_++;
-    return (numero_dni_ != dni.get_dni());
+    return (( numero_dni_ + letra_dni_) != (dni.get_dni() + dni.get_letra()));
 }
 
 bool dni_t::operator<(dni_t& dni){
     
     contador_++;
-    return (numero_dni_ < dni.get_dni());
+    return (numero_dni_ + letra_dni_< dni.get_dni() + dni.get_letra());
 }
 
 bool dni_t::operator>(dni_t& dni){
     
     contador_++;
-    return (numero_dni_ > dni.get_dni());
+    return (numero_dni_ + letra_dni_ > dni.get_dni() + dni.get_letra());
 }
 
 bool dni_t::operator<=(dni_t& dni){
     
     contador_++;
-    return (numero_dni_ <= dni.get_dni());
+    return (numero_dni_ + letra_dni_<= dni.get_dni() + dni.get_letra());
 }
 
 bool dni_t::operator>=(dni_t& dni){
     
     contador_++;
-    return (numero_dni_ >= dni.get_dni());
+    return (numero_dni_ + letra_dni_>= dni.get_dni() + dni.get_letra());
 }
 
 ostream& operator<<(ostream& os, dni_t dni){
     
-    os << dni.get_dni();
+    os << dni.get_dni() << dni.get_letra();
     return os;
 }

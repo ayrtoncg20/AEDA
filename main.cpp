@@ -38,9 +38,23 @@ int main (void){
     int semilla = time(NULL);
     for (int i = 0; i < size; i++){
         banco_dni[i] = rand() % 50000000 + 30000000;
+        
+        //modificacion
+        /*
+        banco_dni[0] = 11111;
+        banco_dni[1] = 11111;
+        banco_dni[2] = 11111;
+        banco_dni[3] = 11111;
+        banco_dni[4] = 11111;
+        banco_dni[5] = 11111;
+        banco_dni[6] = 11111;
+        banco_dni[7] = 11111;
+        banco_dni[8] = 11111;
+        banco_dni[9] = 11111;
+        */
+        
         dni_aleatorio = rand() % 23 + 1;
-        letra_aleatoria = 
-        cout << "LETRA -> " << letra_aleatoria << endl;
+        letra_aleatoria = "TRWAGMYFPDXBNJZSQVHLCKE"[dni_aleatorio % 23];
         vector_dni[i].set_dni(banco_dni[i]);
         vector_dni[i].set_letra(letra_aleatoria);
         srand(semilla--);

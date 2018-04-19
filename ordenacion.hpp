@@ -54,7 +54,7 @@ void ordenacion_t<clave>::insercion(clave vector[], int size, int opcion){
             cout << "VECTOR -> [ ";
             for (int k = 0; k < size; k++){
                 if (k != size -1){
-                    cout << vector[k]  << ",";
+                    cout << vector[k] << ",";
                 }
                 else {
                     cout << vector[k] << "";
